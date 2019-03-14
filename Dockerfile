@@ -22,8 +22,7 @@ RUN set -ex; \
 		wget \
 	; \
 	\
-	rm -rf /var/lib/apt/lists/* \
-	gem install sass \
+	gem install sass; \
 	docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr; \
 	docker-php-ext-install -j "$(nproc)" \
 		gd \
